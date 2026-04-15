@@ -14,6 +14,7 @@ body {
 .head1{
   position:sticky;
   top:0;
+  z-index: 1000;
 }
 .navbar {
   display: flex;
@@ -23,7 +24,8 @@ body {
   background: #a9a6a6;
   color: #c6c0c0;
   margin-top:0;  
-   
+    position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -43,6 +45,7 @@ body {
   color: #fff;
   font-size: 16px;
   transition: 0.3s;
+    
 }
 
 .nav-links li a:hover {
@@ -102,9 +105,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    height: 100vh; /* 🔥 Full screen height */
-    width: 100%;
-
+    /* height: 100vh; /* 🔥 Full screen height */
+    /* width: 100%; */ 
+    min-height: 100vh;   /* change from fixed height */
+    height: auto;
+    padding: 100px 20px;
+   
     
 }
 .text1{
@@ -113,6 +119,7 @@ body {
  left:5%;
  width:350px;
  color:#f8f9f9;
+ 
 }
 
 .text1 p{
@@ -472,10 +479,15 @@ body {
     flex-direction: column;
     align-items: center;
     display: none;
+   z-index:9999;
+    
   }
 
   .nav-links li {
+    
     margin: 15px 0;
+    
+    
   }
 
   .menu-toggle {
@@ -486,6 +498,7 @@ body {
     display: none;
     
   }
+  
   
 .about-container {
     flex-direction: column;
@@ -507,9 +520,18 @@ body {
     flex-direction: column;
     text-align: center;
   }
-  .hero {
-        background-attachment: scroll; /* fix mobile issue */
-        height: 100vh;
-    }
+  /* .hero {
+        background-attachment: scroll; 
+        height: 100vh;}*/
+
+   .hero {
+    min-height: 70vh;  /* reduce height on small screens */
+    padding: 60px 20px;
+  }
+
+  .text1 {
+    width: 100%;
+    top: 20%;
+  }
 }
 
