@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #f8f9f9;
   
@@ -527,6 +529,7 @@ body {
    .hero {
     min-height: 70vh;  /* reduce height on small screens */
     padding: 60px 20px;
+   
   }
 
   .text1 {
